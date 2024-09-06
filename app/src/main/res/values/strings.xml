@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">lastFm</string>
+    <string name="layout_title_popular_artists">Artistas Populares</string>
+    <string name="layout_title_popular_songs">Canciones Populares</string>
 </resources>
