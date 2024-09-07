@@ -49,7 +49,7 @@ public class TopSongsPresenter implements TopSongsMvp.Presenter {
         }
         List<Song> songs = response.body().getTopTracks().getTracks();
         songs.sort((song1, song2) -> {
-            return ToolBox.compareLongStr(song2.getAttr().getRank(), song1.getAttr().getRank());
+            return ToolBox.compareLongStr(song1.getAttr().getRank(), song2.getAttr().getRank());
         });
         view.onTopTracksResult(songs);
     }
