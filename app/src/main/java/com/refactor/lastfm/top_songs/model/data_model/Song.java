@@ -45,11 +45,11 @@ public class Song {
         this.url = url;
     }
 
-    public SongImage[] getImage() {
+    public SongImage[] getImages() {
         return image;
     }
 
-    public void setImage(SongImage[] image) {
+    public void setImages(SongImage[] image) {
         this.image = image;
     }
 

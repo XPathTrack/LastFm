@@ -12,7 +12,7 @@ public interface TopSongsMvp {
     interface View {
         void onLoadTopTracks();
 
-        void onTopTracksResult(List<Song> artists);
+        void onTopTracksResult(List<Song> songs);
 
         void onTopTracksError(String title, String msg);
 
