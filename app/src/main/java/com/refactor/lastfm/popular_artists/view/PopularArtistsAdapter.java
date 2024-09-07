@@ -37,7 +37,6 @@ public class PopularArtistsAdapter extends RecyclerView.Adapter<PopularArtistsAd
     public void onBindViewHolder(@NonNull PopArtsHolder holder, int position) {
         Artist artist = artists.get(position);
         holder.tvPopArtsName.setText(artist.getName());
-        holder.tvPopArtsPlaycount.setText(artist.getPlaycount());
         holder.tvPopArtsListeners.setText(artist.getListeners());
         holder.tvPopArtsWeb.setText(artist.getUrl());
         Glide.with(holder.itemView).load(artist.getImages()[2].getUrl()).diskCacheStrategy(DiskCacheStrategy.ALL).into(holder.ivPopArts);
@@ -67,7 +66,6 @@ public class PopularArtistsAdapter extends RecyclerView.Adapter<PopularArtistsAd
 
         private final ImageView ivPopArts;
         private final TextView tvPopArtsName;
-        private final TextView tvPopArtsPlaycount;
         private final TextView tvPopArtsListeners;
         private final TextView tvPopArtsWeb;
 
@@ -75,7 +73,6 @@ public class PopularArtistsAdapter extends RecyclerView.Adapter<PopularArtistsAd
             super(itemView);
             ivPopArts = itemView.findViewById(R.id.iv_popular_artist);
             tvPopArtsName = itemView.findViewById(R.id.tv_popular_artist_name);
-            tvPopArtsPlaycount = itemView.findViewById(R.id.tv_popular_artist_playcount);
             tvPopArtsListeners = itemView.findViewById(R.id.tv_popular_artist_listeners);
             tvPopArtsWeb = itemView.findViewById(R.id.tv_popular_artist_web);
         }

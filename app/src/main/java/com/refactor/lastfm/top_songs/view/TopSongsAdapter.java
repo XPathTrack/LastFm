@@ -70,6 +70,7 @@ public class TopSongsAdapter extends RecyclerView.Adapter<TopSongsAdapter.TopSon
             tvTopSongsPlaycount = itemView.findViewById(R.id.tv_popular_artist_playcount);
             tvTopSongsListeners = itemView.findViewById(R.id.tv_popular_artist_listeners);
             tvTopSongsWeb = itemView.findViewById(R.id.tv_popular_artist_web);
+            tvTopSongsPlaycount.setVisibility(View.VISIBLE);
         }
     }
 }

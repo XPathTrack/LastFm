@@ -47,7 +47,7 @@ public class TopSongsPresenter implements TopSongsMvp.Presenter {
                         "Recupere su conexión a internet y vuelva a intentar.");
             return;
         }
-        List<Song> songs = response.body().getToptracks().getTracks();
+        List<Song> songs = response.body().getTopTracks().getTracks();
         songs.sort((song1, song2) -> {
             return ToolBox.compareLongStr(song2.getAttr().getRank(), song1.getAttr().getRank());
         });
