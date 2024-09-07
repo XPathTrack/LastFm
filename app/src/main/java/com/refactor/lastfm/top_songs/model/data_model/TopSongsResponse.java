@@ -4,11 +4,11 @@ public class TopSongsResponse {
 
     private TopSongs toptracks;
 
-    public TopSongs getToptracks() {
+    public TopSongs getTopTracks() {
         return toptracks;
     }
 
-    public void setToptracks(TopSongs toptracks) {
+    public void setTopTracks(TopSongs toptracks) {
         this.toptracks = toptracks;
     }
 }
