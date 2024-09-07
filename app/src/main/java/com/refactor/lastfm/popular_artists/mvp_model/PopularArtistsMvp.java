@@ -17,6 +17,8 @@ public interface PopularArtistsMvp {
         void onPopArtistsError(String title, String msg);
 
         void onPopArtistsFatal(String title, String msg);
+
+        void onArtistClick(Artist artist);
     }
 
     interface Presenter {
@@ -25,6 +27,8 @@ public interface PopularArtistsMvp {
         void onPopArtistsResult(Response<PopArtistsResponse> response);
 
         void onPopArtistsFailure(Throwable t);
+
+        void onArtistClick(Artist artist);
     }
 
     interface Model {
