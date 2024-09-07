@@ -4,7 +4,7 @@
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/red_app</item>
         <item name="colorOnPrimary">@color/white</item>
-        <item name="android:statusBarColor">@color/red_light</item>
+        <item name="android:statusBarColor">@color/black_app</item>
         <item name="android:fontFamily">serif</item>
         <!-- Customize your theme here. -->
     </style>
