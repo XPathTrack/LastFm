@@ -6,8 +6,11 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.refactor.lastfm.R;
+import com.refactor.lastfm.top_songs.model.data_model.Song;
 import com.refactor.lastfm.top_songs.mvp_model.TopSongsMvp;
 import com.refactor.lastfm.top_songs.presenter.TopSongsPresenter;
+
+import java.util.List;
 
 public class TopSongsActivity extends AppCompatActivity implements TopSongsMvp.View {
 
@@ -21,5 +24,25 @@ public class TopSongsActivity extends AppCompatActivity implements TopSongsMvp.V
         ((TextView) findViewById(R.id.toolbar_title)).setText(R.string.layout_title_top_songs);
         presenter = new TopSongsPresenter(this, this);
         presenter.loadTopTracks(getIntent().getStringExtra(ARTIST_KEY));
+    }
+
+    @Override
+    public void onLoadTopTracks() {
+
+    }
+
+    @Override
+    public void onTopTracksResult(List<Song> artists) {
+
+    }
+
+    @Override
+    public void onTopTracksError(String title, String msg) {
+
+    }
+
+    @Override
+    public void onTopTracksFatal(String title, String msg) {
+
     }
 }
