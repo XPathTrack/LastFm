@@ -2,7 +2,7 @@ package com.refactor.lastfm.top_songs.model.data_model;
 
 import com.google.gson.annotations.SerializedName;
 
-public class TopSong {
+public class Song {
 
     private String name;
     private String playcount;

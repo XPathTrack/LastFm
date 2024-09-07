@@ -4,13 +4,13 @@ import java.util.List;
 
 public class TopSongs {
 
-    private List<TopSong> track;
+    private List<Song> track;
 
-    public List<TopSong> getTracks() {
+    public List<Song> getTracks() {
         return track;
     }
 
-    public void setTracks(List<TopSong> tracks) {
+    public void setTracks(List<Song> tracks) {
         this.track = tracks;
     }
 }
