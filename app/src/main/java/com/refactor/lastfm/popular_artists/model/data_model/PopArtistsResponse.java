@@ -2,13 +2,13 @@ package com.refactor.lastfm.popular_artists.model.data_model;
 
 public class PopArtistsResponse {
 
-    private PopArtists artists;
+    private PopArtists topartists;
 
     public PopArtists getPopArtists() {
-        return artists;
+        return topartists;
     }
 
     public void setPopArtists(PopArtists artists) {
-        this.artists = artists;
+        this.topartists = artists;
     }
 }

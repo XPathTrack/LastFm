@@ -3,7 +3,6 @@ package com.refactor.lastfm.popular_artists.model.data_model;
 public class Artist {
 
     private String name;
-    private String playcount;
     private String listeners;
     private String url;
     private ArtistImage[] image;
@@ -14,14 +13,6 @@ public class Artist {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getPlaycount() {
-        return playcount;
-    }
-
-    public void setPlaycount(String playcount) {
-        this.playcount = playcount;
     }
 
     public String getListeners() {
