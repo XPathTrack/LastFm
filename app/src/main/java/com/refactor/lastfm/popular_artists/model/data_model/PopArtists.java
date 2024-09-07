@@ -1,13 +1,15 @@
 package com.refactor.lastfm.popular_artists.model.data_model;
 
-public class PopArtists {
-    private Artist[] artists;
+import java.util.List;
 
-    public Artist[] getArtists() {
-        return artists;
+public class PopArtists {
+    private List<Artist> artist;
+
+    public List<Artist> getArtists() {
+        return artist;
     }
 
-    public void setArtists(Artist[] artists) {
-        this.artists = artists;
+    public void setArtists(List<Artist> artists) {
+        this.artist = artists;
     }
 }
