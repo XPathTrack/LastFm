@@ -6,6 +6,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.refactor.lastfm.R;
+import com.refactor.lastfm.popular_artists.model.data_model.PopArtistsResponse;
 import com.refactor.lastfm.popular_artists.mvp_model.PopularArtistsMvp;
 import com.refactor.lastfm.popular_artists.presenter.PopularArtistsPresenter;
 
@@ -25,5 +26,20 @@ public class PopularArtistsActivity extends AppCompatActivity implements Popular
     protected void onStart() {
         super.onStart();
         presenter.loadPopArtists();
+    }
+
+    @Override
+    public void onLoadPopArtists() {
+
+    }
+
+    @Override
+    public void onPopArtistsResult(PopArtistsResponse popArtists) {
+
+    }
+
+    @Override
+    public void onPopArtistsError(String title, String msg) {
+
     }
 }
