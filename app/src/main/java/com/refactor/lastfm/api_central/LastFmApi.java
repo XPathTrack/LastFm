@@ -6,7 +6,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class LastFmApi {
     public static final String URL_BASE = "https://ws.audioscrobbler.com/2.0/";
     public static final String URL_POP_ARTISTS = "?method=chart.gettopartists&api_key=cf2894b9c73a323e24f5c6a9aab1eb85&limit=10&format=json";
-    public static final String URL_POP_SONGS = "?method=artist.gettoptracks&artist={artists_name}&api_key=cf2894b9c73a323e24f5c6a9aab1eb85&limit=10&format=json";
+    public static final String URL_TOP_SONGS = "?method=artist.gettoptracks&api_key=cf2894b9c73a323e24f5c6a9aab1eb85&limit=10&format=json";
     public static final String API_KEY = "cf2894b9c73a323e24f5c6a9aab1eb85";
 
     private static class LazyApi {

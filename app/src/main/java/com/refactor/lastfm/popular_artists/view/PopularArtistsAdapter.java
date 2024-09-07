@@ -29,7 +29,7 @@ public class PopularArtistsAdapter extends RecyclerView.Adapter<PopularArtistsAd
     @NonNull
     @Override
     public PopArtsHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.popular_artists_card, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.popular_card, parent, false);
         return new PopArtsHolder(view);
     }
 
@@ -40,7 +40,7 @@ public class PopularArtistsAdapter extends RecyclerView.Adapter<PopularArtistsAd
         holder.tvPopArtsPlaycount.setText(artist.getPlaycount());
         holder.tvPopArtsListeners.setText(artist.getListeners());
         holder.tvPopArtsWeb.setText(artist.getUrl());
-        Glide.with(holder.itemView).load(artist.getImage()[2].getUrl()).diskCacheStrategy(DiskCacheStrategy.ALL).into(holder.ivPopArts);
+        Glide.with(holder.itemView).load(artist.getImages()[2].getUrl()).diskCacheStrategy(DiskCacheStrategy.ALL).into(holder.ivPopArts);
         holder.itemView.setOnClickListener(view -> {
             onPopArtClick.onClick(artist);
         });

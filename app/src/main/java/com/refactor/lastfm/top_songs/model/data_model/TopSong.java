@@ -1,12 +1,17 @@
-package com.refactor.lastfm.popular_artists.model.data_model;
+package com.refactor.lastfm.top_songs.model.data_model;
 
-public class Artist {
+import com.google.gson.annotations.SerializedName;
+
+public class TopSong {
 
     private String name;
     private String playcount;
     private String listeners;
     private String url;
-    private ArtistImage[] image;
+    private SongImage[] image;
+
+    @SerializedName("@attr")
+    private SongAttr attr;
 
     public String getName() {
         return name;
@@ -40,11 +45,19 @@ public class Artist {
         this.url = url;
     }
 
-    public ArtistImage[] getImages() {
+    public SongImage[] getImage() {
         return image;
     }
 
-    public void setImages(ArtistImage[] images) {
-        this.image = images;
+    public void setImage(SongImage[] image) {
+        this.image = image;
+    }
+
+    public SongAttr getAttr() {
+        return attr;
+    }
+
+    public void setAttr(SongAttr attr) {
+        this.attr = attr;
     }
 }

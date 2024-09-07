@@ -15,7 +15,7 @@ import com.refactor.lastfm.R;
 import com.refactor.lastfm.popular_artists.model.data_model.Artist;
 import com.refactor.lastfm.popular_artists.mvp_model.PopularArtistsMvp;
 import com.refactor.lastfm.popular_artists.presenter.PopularArtistsPresenter;
-import com.refactor.lastfm.popular_songs.view.PopularSongsActivity;
+import com.refactor.lastfm.top_songs.view.TopSongsActivity;
 import com.refactor.lastfm.utils.UIUtils;
 
 import java.util.List;
@@ -36,7 +36,7 @@ public class PopularArtistsActivity extends AppCompatActivity implements Popular
         progressBar = findViewById(R.id.pb_load_data);
         rvPopArts = findViewById(R.id.rv_popular_artists);
         popArtsAdapter = new PopularArtistsAdapter(artist -> {
-            startActivity(new Intent(this, PopularSongsActivity.class));
+            presenter.onArtistClick(artist);
         });
         rvPopArts.setAdapter(popArtsAdapter);
         rvPopArts.setLayoutManager(new GridLayoutManager(this, 2));
@@ -73,5 +73,12 @@ public class PopularArtistsActivity extends AppCompatActivity implements Popular
             finish();
         });
         aDialog.show();
+    }
+
+    @Override
+    public void onArtistClick(Artist artist) {
+        Intent intent = new Intent(this, TopSongsActivity.class);
+        intent.putExtra(TopSongsActivity.ARTIST_KEY, artist.getName());
+        startActivity(intent);
     }
 }
