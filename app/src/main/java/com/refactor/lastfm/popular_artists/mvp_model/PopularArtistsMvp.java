@@ -10,12 +10,13 @@ public interface PopularArtistsMvp {
         void onLoadPopArtists();
         void onPopArtistsResult(PopArtistsResponse popArtists);
         void onPopArtistsError(String title, String msg);
+        void onPopArtistsFatal(String title, String msg);
     }
 
     interface Presenter {
+        void loadPopArtists();
         void onPopArtistsResult(Response<PopArtistsResponse> response);
         void onPopArtistsFailure(Throwable t);
-        void loadPopArtists();
     }
 
     interface Model {

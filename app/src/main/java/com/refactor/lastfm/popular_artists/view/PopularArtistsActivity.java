@@ -19,7 +19,7 @@ public class PopularArtistsActivity extends AppCompatActivity implements Popular
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ((TextView) findViewById(R.id.toolbar_title)).setText(R.string.layout_title_popular_artists);
-        presenter = new PopularArtistsPresenter(this);
+        presenter = new PopularArtistsPresenter(this, this);
     }
 
     @Override
@@ -40,6 +40,11 @@ public class PopularArtistsActivity extends AppCompatActivity implements Popular
 
     @Override
     public void onPopArtistsError(String title, String msg) {
+
+    }
+
+    @Override
+    public void onPopArtistsFatal(String title, String msg) {
 
     }
 }
