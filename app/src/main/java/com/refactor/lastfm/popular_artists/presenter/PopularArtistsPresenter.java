@@ -70,4 +70,9 @@ public class PopularArtistsPresenter implements PopularArtistsMvp.Presenter {
         t.printStackTrace();
         view.onPopArtistsFatal("Fallo técnico", "Por favor contacte a soporte técnico.");
     }
+
+    @Override
+    public void onArtistClick(Artist artist) {
+        view.onArtistClick(artist);
+    }
 }

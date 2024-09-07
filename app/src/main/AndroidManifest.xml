@@ -16,7 +16,7 @@
         android:theme="@style/Theme.LastFm"
         tools:targetApi="31">
         <activity
-            android:name=".popular_songs.view.PopularSongsActivity"
+            android:name=".top_songs.view.TopSongsActivity"
             android:exported="false" />
         <activity
             android:name=".popular_artists.view.PopularArtistsActivity"
