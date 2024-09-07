@@ -47,11 +47,11 @@ public class TopSongsPresenter implements TopSongsMvp.Presenter {
                         "Recupere su conexión a internet y vuelva a intentar.");
             return;
         }
-        List<Song> artists = response.body().getToptracks().getTracks();
-        artists.sort((artist1, artist2) -> {
-            return ToolBox.compareLongStr(artist2.getListeners(), artist1.getListeners());
+        List<Song> songs = response.body().getToptracks().getTracks();
+        songs.sort((song1, song2) -> {
+            return ToolBox.compareLongStr(song2.getAttr().getRank(), song1.getAttr().getRank());
         });
-        view.onTopTracksResult(artists);
+        view.onTopTracksResult(songs);
     }
 
     @Override
